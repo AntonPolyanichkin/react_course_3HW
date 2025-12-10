@@ -1,0 +1,73 @@
+.sportsmens {
+	padding: 2rem 0;
+	color: #fff; 
+ 
+	&__container {
+	  max-width: 900px;
+	}
+ 
+	&__content {
+	  display: flex;
+	  gap: 2rem;
+	  justify-content: center;
+	}
+ 
+	
+	ul {
+	  width: 100%;
+	  max-width: 350px;
+	  padding: 1rem;
+	  border-radius: 10px;
+ 
+	  background-color: rgb(70, 68, 68); 
+	  border: 1px solid rgb(100, 100, 100);
+	  min-height: 350px;
+ 
+	  display: flex;
+	  flex-direction: column;
+	  gap: 0.75rem;
+	}
+ 
+	
+	li {
+	  background-color: rgb(90, 88, 88);
+	  border: 1px solid rgb(120, 120, 120);
+	  padding: 0.75rem 1rem;
+	  border-radius: 8px;
+ 
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+ 
+	  transition: background 0.2s ease;
+ 
+	  &:hover {
+		 background-color: rgb(110, 108, 108);
+	  }
+ 
+	  button {
+		 padding: 0.4rem 0.7rem;
+		 border-radius: 6px;
+ 
+		 color: #fff;
+		 font-size: 0.9rem;
+		 transition: 0.2s ease;
+ 
+		 &:hover {
+			opacity: 0.85;
+		 }
+	  }
+	}
+ 
+
+	&__list-of-sportsmens li button {
+	  background-color: rgb(70, 150, 70); 
+	  border: 1px solid rgb(100, 170, 100);
+	}
+ 
+	
+	&__list-competition-sportsmens li button {
+	  background-color: rgb(170, 60, 60); 
+	  border: 1px solid rgb(200, 90, 90);
+	}
+ }
