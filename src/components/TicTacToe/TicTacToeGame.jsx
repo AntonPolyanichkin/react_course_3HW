@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Square from "./square";
+import Square from "./Square";
 import styles from "./style/TicTacToe.module.scss";
 function TicTacToeGame() {
   const [history, setHistory] = useState([]);
@@ -40,6 +40,10 @@ function TicTacToeGame() {
       if (currentBoard[a] && currentBoard[a] === currentBoard[b] && currentBoard[a] === currentBoard[c]) {
         setWinner(currentBoard[a]);
         alert(`Winner: ${currentBoard[a]}`);
+        setBoard(Array(9).fill(null));
+        setHistory([]);
+        setSquareValue(currentBoard[a]);
+        setWinner(null);
       }
     }
   }
@@ -70,7 +74,9 @@ function TicTacToeGame() {
               <Square value={board[8]} handleClick={() => onClickSquare(8)} />
             </div>
           </div>
-          <button onClick={handleMoveBack}>Move back</button>
+          <button onClick={handleMoveBack} disabled={history.length > 0 ? false : true}>
+            Move back
+          </button>
         </div>
       </div>
     </section>
